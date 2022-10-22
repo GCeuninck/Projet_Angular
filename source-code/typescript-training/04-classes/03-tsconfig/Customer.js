@@ -1,38 +1,25 @@
+"use strict";
 class Customer {
-
-    private _firstName: string;
-    private _lastName: string;
-
-    constructor(theFirst: string, theLast: string) {
+    constructor(theFirst, theLast) {
         this._firstName = theFirst;
         this._lastName = theLast;
     }
-
-    public get firstName(): string {
+    get firstName() {
         return this._firstName;
     }
-
-    public set firstName(value: string) {
+    set firstName(value) {
         this._firstName = value;
     }
-
-    public get lastName(): string {
+    get lastName() {
         return this._lastName;
     }
-    public set lastName(value: string) {
+    set lastName(value) {
         this._lastName = value;
     }
-    
 }
-
 // let's create an instance
 let myCustomer = new Customer("Martin", "Dixon");
-
 myCustomer.firstName = "Susan";
 myCustomer.lastName = "Public";
-
 console.log(myCustomer.firstName);
 console.log(myCustomer.lastName);
-
-//Pour lancer : tsc --target ES5 --noEmitOnError Customer.ts
-// voir tsconfig.json pour sauvegarder les commandes
